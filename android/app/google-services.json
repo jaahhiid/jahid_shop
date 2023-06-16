@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "655681732430",
+    "project_id": "jahid-shop",
+    "storage_bucket": "jahid-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655681732430:android:bfc8d98e9eb3a00abce81f",
+        "android_client_info": {
+          "package_name": "com.example.jahid_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655681732430-tq6d72dj66kp36aos0ktfkt2g7j87kfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jahid_shop",
+            "certificate_hash": "51da0a13636d5d12ff737b1e8cbf933eaf7df51f"
+          }
+        },
+        {
+          "client_id": "655681732430-rsbahibd0m1hpam5l4tlfgqaqbi02h4s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQ9x5sFdtge48wMPfK9n9J93nSMOxJFpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "655681732430-rsbahibd0m1hpam5l4tlfgqaqbi02h4s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
