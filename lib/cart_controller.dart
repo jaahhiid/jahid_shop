@@ -24,7 +24,23 @@ class CartController extends GetxController {
     } else {
       _products[product] -= 1;
     }
+    Get.snackbar(
+      'Product Removed',
+      'You have Removed the ${product.name} to the cart',
+      snackPosition: SnackPosition.BOTTOM,
+      duration: const Duration(seconds: 2),
+    );
   }
 
   get products => _products;
+
+  get productSubtotal => _products.entries
+      .map((product) => product.key.price * product.value)
+      .toList();
+
+  get total => _products.entries
+      .map((product) => product.key.price * product.value)
+      .toList()
+      .reduce((value, element) => value + element)
+      .toStringAsFixed(2);
 }

@@ -4,24 +4,27 @@ import 'package:jahid_shop/cart_controller.dart';
 import 'package:jahid_shop/product_model.dart';
 
 class CartProducts extends StatelessWidget {
-  final CartController controller = Get.find();
   CartProducts({Key? key}) : super(key: key);
+
+  final CartController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Obx(
-      () => SizedBox(
-        height: 600,
-        child: ListView.builder(
-            itemCount: controller.products,
-            itemBuilder: (BuildContext context, int index) {
-             return CartProductCard(
-                controller: controller,
-                product: controller.products.keys.toList()[index],
-                quantity: controller.products.values.toList()[index],
-                index: index,
-              );
-            }),
+      () => SingleChildScrollView(
+        child: SizedBox(
+          height: 600,
+          child: ListView.builder(
+              itemCount: controller.products.length,
+              itemBuilder: (BuildContext context, int index) {
+                return CartProductCard(
+                  controller: controller,
+                  product: controller.products.keys.toList()[index],
+                  quantity: controller.products.values.toList()[index],
+                  index: index,
+                );
+              }),
+        ),
       ),
     );
   }
@@ -52,7 +55,12 @@ class CartProductCard extends StatelessWidget {
             radius: 40,
             backgroundImage: NetworkImage(product.imageUrl),
           ),
-          Expanded(child: Text(product.name)),
+          const SizedBox(width: 20),
+          Expanded(
+              child: Text(
+            product.name,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          )),
           IconButton(
               onPressed: () {
                 controller.removeProduct(product);
